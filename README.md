@@ -7,12 +7,12 @@ The `CustomAuthProvider` implements `SqlAuthenticationProvider` and the authenti
 ## Configure the sample
 
 Provide details in the sample in the `Program.cs` file:
-- appClientId: Application Client ID of First Party App to be used for authentication.
-- appName: Name of client application
+- `appClientId`: Application Client ID of First Party App to be used for authentication (by default SqlClient's client id is used)
+- `appName`: Name of client application
 - Connection string details
-  - DataSource: Target Azure SQL Server endpoint
-  - InitialCatalog: Name of Azure Database instance
-  - UserID: Username for silent authentication (applicable when cache is persisted)
+  - `DataSource`: Target Azure SQL Server endpoint
+  - `InitialCatalog`: Name of Azure Database instance
+  - `UserID`: Username for silent authentication (applicable when cache is persisted)
 
 ## How to build the sample
 
