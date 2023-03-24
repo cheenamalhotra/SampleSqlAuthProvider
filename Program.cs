@@ -13,11 +13,13 @@ namespace SampleSqlAuthProvider
 {
     internal class Program
     {
+        private const string DEFAULT_APP_CLIENT_ID = "2fd908ad-0664-4344-b9be-cd3e8b574c38";
+
         public static async Task Main()
         {
             SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInteractive,
                 new CustomAuthProvider(new Authenticator(
-                    appClientId: "", // TODO Provide own application ID
+                    appClientId: DEFAULT_APP_CLIENT_ID, // TODO Provide own application ID if needed.
                     appName: "Sample Sql Auth Provider Implementation" // TODO Provide application name
                 )));
 
